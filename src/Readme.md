@@ -1,1 +1,1 @@
-jin ɓot 
+Queen Adiza
