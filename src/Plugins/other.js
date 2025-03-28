@@ -53,7 +53,7 @@ module.exports = [{
       return _0x8895ab("*Provide a phone number*\nExample: .pair 23359373431x");
     }
     const _0x2f36c9 = _0x6d32b9.replace(/\+|\s/g, "").trim();
-    const _0x322048 = ["https://malvin-pair-code-xzcb.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9), "hhttps://malvin-pair-code-xzcb.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9)];
+    const _0x322048 = ["https://adiza-session.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9), "https://adiza-session.onrender.com/code?number=" + encodeURIComponent(_0x2f36c9)];
     for (const _0x891021 of _0x322048) {
       try {
         const _0x27a9f3 = await fetch(_0x891021);
