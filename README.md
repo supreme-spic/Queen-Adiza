@@ -17,7 +17,7 @@ src="https://files.catbox.moe/sql1zr.jpg?">
 <a href="https://github.com/Matri199/Queen-Adiza/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Matri199/Queen-Adiza?color=blue&style=flat-square"></a>
 <a href="https://github.com/Matri199/Queen-Adiza/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Matri199/Queen-Adiza?label=Watchers&color=blue&style=flat-square"></a>
 <a href="https://github.com/Matri199/Queen-Adiza/"><img title="Size" src="https://img.shields.io/github/repo-size/Matri199/Queen-Adiza?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkingmalvn%2FJINWOO-BOT&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMatri199%2FQUEEN-ADIZA&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
 <a href="https://github.com/Matri199/Queen-Adiza/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;</a>
 <p align="center"><img src="https://profile-counter.glitch.me/{Queen-Adiza}/count.svg" alt="Matri199 :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Matri199}/count.svg" /></p>
 <p align="center">
