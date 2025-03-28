@@ -520,7 +520,7 @@ module.exports = [{
     let _0x3e3829 = _0x12ec5e.chat;
     let _0x2ae3c5 = "https://chat.whatsapp.com/" + (await _0x5d53ff.groupInviteCode(_0x3e3829));
     await _0x5d53ff.sendMessage(_0x3b53fd + "@s.whatsapp.net", {
-      text: "*GROUP INVITATION*\n\nSomeone invites you to join this group: \n\n" + _0x2ae3c5,
+      text: "*GROUP INVITATION*\n\n🚀Matrix invites you to join his group🪀: \n\n" + _0x2ae3c5,
       mentions: [_0x12ec5e.sender]
     });
     _0xc638bb("*Successfully sent invite link*");
