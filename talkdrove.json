@@ -9,7 +9,7 @@
   
 "env": {
       "SESSION_ID": {
-        "description": "Put your SESSION_ID here. Make sure it starts with QUEEN-ADIZA~, or get session id from here, https://github.com/kingmalvn/Jinwoo-bot",
+        "description": "Put your SESSION_ID here. Make sure it starts with QUEEN-ADIZA~, or get session id from here, https://adiza-session.onrender.com",
         "value":"",
         "required": true
         
