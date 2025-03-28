@@ -1,1 +1,1 @@
-jin bot
+ Queen Adiza Bot
