@@ -1,7 +1,7 @@
 /*
-  project_name : jinwoo bot
+  project_name : ADIZA Bot
   Version : 2.4.0
-  Owner : Malvin King 
+  Owner : Matrix King 
   Clone if you can😪
 
 
@@ -17,7 +17,7 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 //--------------------[ SESSION ID ]----------------------//
 
 global.SESSION_ID = process.env.SESSION_ID || '' 
-//Enter your Jinwoo session id here; must start with MALVIN-XD~
+//Enter your Queen Adiza session id here; must start with QUEEN-ADIZA~
 
 //--------------------[ BOT NAME ]----------------------//
 
