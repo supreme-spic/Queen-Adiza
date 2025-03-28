@@ -11,7 +11,7 @@ const {
 } = require("file-type");
 const path = require("path");
 module.exports = [{
-  command: ["jinwoo"],
+  command: ["matrix"],
   operate: async ({
     m: _0x4d6bf5,
     reply: _0x2fb246,
