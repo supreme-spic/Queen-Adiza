@@ -59,7 +59,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["malvin"],
+  command: ["matrix"],
   operate: async ({
     m: _0xc45293,
     reply: _0x1bf876,
