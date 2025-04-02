@@ -59,7 +59,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["matrix"],
+  command: ["adiza"],
   operate: async ({
     m: _0xc45293,
     reply: _0x1bf876,
@@ -133,7 +133,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["deepseek"],
+  command: ["openai"], // Changed command to "openai"
   operate: async ({
     m: _0x3db143,
     reply: _0xeb9056,
@@ -143,17 +143,37 @@ module.exports = [{
       return _0xeb9056("*Please ask a question*");
     }
     try {
-      const _0x492bd1 = "https://api.siputzx.my.id/api/ai/deepseek-r1?content=" + encodeURIComponent(_0x3ad335);
-      const _0x3caa4d = await fetch(_0x492bd1);
-      const _0x4c3987 = await _0x3caa4d.json();
-      if (!_0x4c3987.status || !_0x4c3987.data) {
-        return _0xeb9056("*Please try again later or try another command!*");
-      } else {
-        _0xeb9056(_0x4c3987.data);
+      const newApiUrl = `https://vapis.my.id/api/openai?q=${encodeURIComponent(_0x3ad335)}`; // Updated API URL
+      const response = await fetch(newApiUrl);
+
+      if (!response.ok) {
+        let errorMessage = "API request failed. ";
+        if (response.status === 429) { // Rate limit
+          errorMessage += "Rate limit exceeded. Please try again later.";
+        } else if (response.status === 500 || response.status === 503) { // Server errors
+          errorMessage += "The API server is experiencing issues. Please try again later.";
+        } else {
+          const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+          errorMessage += `HTTP error ${response.status}: ${errorData.message || response.statusText}`;
+        }
+        return _0xeb9056(errorMessage);
       }
-    } catch (_0x2f1d83) {
-      console.error("Error fetching response from DeepSeek-R1 API:", _0x2f1d83);
-      _0xeb9056("An error occurred while fetching the response from DeepSeek-R1 API.");
+
+      const data = await response.json();
+
+      if (data.status) { // Check for 'status' field instead of 'success'
+        if (data.result) {
+          _0xeb9056(data.result); // Access the result from the 'result' field
+        } else {
+          _0xeb9056("*API response missing 'result' field. Please try again later.*");
+        }
+      } else {
+        _0xeb9056(data.message || "API request failed."); // Handle API failure
+      }
+
+    } catch (error) {
+      console.error("Error querying OpenAI API:", error);
+      _0xeb9056("An error occurred while fetching the response from OpenAI API.");
     }
   }
 }, {
