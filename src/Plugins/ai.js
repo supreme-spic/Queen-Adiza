@@ -38,7 +38,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
   }
 }
 }, {
-  command: ["adiza"],
+  command: ["gemini"],
   operate: async ({
     m: _0xc45293,
     reply: _0x1bf876,
