@@ -61,38 +61,6 @@ module.exports = [{
     }
   }
 }, {
-  command: ["calculate", "calculator"],
-  operate: async ({
-    m: _0x2a01a6,
-    text: _0x4b2dc4,
-    prefix: _0x1efdd8,
-    command: _0x43efa5,
-    reply: _0x431709
-  }) => {
-    try {
-      let _0x353006;
-      if (_0x4b2dc4.includes("+")) {
-        const [_0x25eb07, _0x30ef00] = _0x4b2dc4.split("+").map(Number);
-        _0x353006 = _0x25eb07 + _0x30ef00;
-      } else if (_0x4b2dc4.includes("-")) {
-        const [_0x5130d7, _0x3c5c5a] = _0x4b2dc4.split("-").map(Number);
-        _0x353006 = _0x5130d7 - _0x3c5c5a;
-      } else if (_0x4b2dc4.includes("×")) {
-        const [_0x2260e0, _0x2514da] = _0x4b2dc4.split("×").map(Number);
-        _0x353006 = _0x2260e0 * _0x2514da;
-      } else if (_0x4b2dc4.includes("÷")) {
-        const [_0x58dfd1, _0x47d7a4] = _0x4b2dc4.split("÷").map(Number);
-        _0x353006 = _0x58dfd1 / _0x47d7a4;
-      } else {
-        return _0x431709("*Enter a maths question, Example: " + (_0x1efdd8 + _0x43efa5) + " 1 + 1\n\nAvailable options: +, -, ÷, ×*");
-      }
-      _0x431709("" + _0x353006);
-    } catch (_0x40c5d4) {
-      console.error(_0x40c5d4);
-      _0x431709("*An error occurred during the calculation.*");
-    }
-  }
-}, {
   command: ["emojimix", "emix"],
   operate: async ({
     m: _0x283888,
@@ -256,22 +224,97 @@ module.exports = [{
 }, {
   command: ["obfuscate"],
   operate: async ({
-    m: _0x5a397e,
-    text: _0x54e4bc,
-    prefix: _0x1b2ba0,
-    command: _0x5f1595,
-    obfus: _0x11cbb7,
-    reply: _0xf9cbaf
+    m,
+    text,
+    reply,
+    prefix,
+    command
   }) => {
-    if (!_0x54e4bc) {
-      return _0xf9cbaf("*Example: " + (_0x1b2ba0 + _0x5f1595) + " const bot = require('malvin');*");
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [your javascript code]*`);
     }
     try {
-      let _0x3660d1 = await _0x11cbb7(_0x54e4bc);
-      _0xf9cbaf("" + _0x3660d1.result);
-    } catch (_0x36e8fb) {
-      console.error(_0x36e8fb);
-      _0xf9cbaf("*An error occurred while obfuscating the text.*");
+      const apiUrl = `https://apis.davidcyriltech.my.id/obfuscate?code=${encodeURIComponent(text)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        return reply(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        reply("```javascript\n" + data.result.obfuscated_code.code + "\n```"); // Sends obfuscated code within backticks.
+      } else {
+        reply(data.message || "API request failed.");
+      }
+    } catch (error) {
+      console.error("Error obfuscating code:", error);
+      reply("An error occurred while obfuscating the code.");
+    }
+  }
+}, {
+  command: ["calc"],
+  operate: async ({
+    m,
+    text,
+    reply,
+    prefix,
+    command
+  }) => {
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [your calculation]*`);
+    }
+    try {
+      const expression = text.trim(); // Remove extra whitespace
+      const apiUrl = `https://apis.davidcyriltech.my.id/tools/calculate?expr=${encodeURIComponent(expression)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        return reply(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        reply(`Result of ${data.expression}: ${data.result}`);
+      } else {
+        reply(data.message || "API request failed.");
+      }
+    } catch (error) {
+      console.error("Error calculating:", error);
+      reply("An error occurred while performing the calculation.");
+    }
+  }
+}, {
+  command: ["base64encoder", "encode"],
+  operate: async ({ m, text, reply, prefix, command }) => {
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [text to encode]*`);
+    }
+
+    try {
+      const textToEncode = text.trim();
+      const apiUrl = `https://api.siputzx.my.id/api/tools/text2base64?text=${encodeURIComponent(textToEncode)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        return reply(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status) {
+        reply(`Base64 encoded text: \`${data.data.base64}\``);
+      } else {
+        reply(data.message || "API request failed.");
+      }
+    } catch (error) {
+      console.error("Error encoding text:", error);
+      reply("An error occurred while encoding the text.");
     }
   }
 }, {
@@ -594,6 +637,44 @@ module.exports = [{
     }
   }
 }, {
+  command: ["currency"],
+  operate: async ({ m, text, reply, prefix, command }) => {
+    //Check for correct input format: amount, from_currency, to_currency
+    const parts = text.trim().split(" ");
+    if (parts.length !== 3) {
+      return reply(`*Usage: ${prefix}${command} [amount] [from_currency] [to_currency]*\nExample: ${prefix}${command} 100 USD GHS`);
+    }
+
+    const amount = parseFloat(parts[0]);
+    const fromCurrency = parts[1].toUpperCase();
+    const toCurrency = parts[2].toUpperCase();
+
+    if (isNaN(amount) || amount <= 0) {
+      return reply("Invalid amount. Please enter a positive number.");
+    }
+
+    try {
+      const apiUrl = `https://apis.davidcyriltech.my.id/tools/convert?amount=${encodeURIComponent(amount)}&from=${encodeURIComponent(fromCurrency)}&to=${encodeURIComponent(toCurrency)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        return reply(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        reply(`${amount} ${fromCurrency} is equal to ${data.result} ${toCurrency}`);
+      } else {
+        reply(data.message || "API request failed.");
+      }
+    } catch (error) {
+      console.error("Error converting currency:", error);
+      reply("An error occurred while converting the currency.");
+    }
+  }
+}, {
   command: ["tourl", "url"],
   operate: async ({
     m: _0x35341b,
@@ -611,6 +692,37 @@ module.exports = [{
     } catch (_0x441286) {
       console.error(_0x441286);
       _0x1e16f9("*An error occurred while uploading the media.*");
+    }
+  }
+}, {
+  command: ["teraboxdl", "tbxd"],
+  operate: async ({ m, text, reply, prefix, command }) => {
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [Terabox download link]*`);
+    }
+
+    try {
+      const teraboxLink = text.trim();
+      const apiUrl = `https://vapis.my.id/api/terabox?url=${encodeURIComponent(teraboxLink)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        const errorMessage = `API request failed with status ${response.status}: ${errorData.message || response.statusText}`;
+        return reply(errorMessage);
+      }
+
+      const data = await response.json();
+
+      if (data.status && data.data && data.data.length > 0) {
+        const file = data.data[0]; // Assuming only one file is returned
+        reply(`Filename: ${file.filename}\nSize: ${file.size} bytes\nDownload URL: ${file.downloadUrl}`);
+      } else {
+        reply(data.message || "API request failed.  No download URL found.");
+      }
+    } catch (error) {
+      console.error("Error getting Terabox download link:", error);
+      reply("An error occurred while processing the Terabox link.");
     }
   }
 }, {
