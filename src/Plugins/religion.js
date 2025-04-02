@@ -73,4 +73,40 @@ module.exports = [{
       _0x47287d("Error: " + _0x2f418c.message);
     }
   }
+}, {
+  command: ["gita", "gita-verse", "bhagavatgita"],
+  operate: async ({
+    m,
+    reply,
+    baileys // Replace with the actual name of your Baileys instance
+  }) => {
+    try {
+      let verseNumber = m.text.split(' ')[1];
+      if (!verseNumber || isNaN(verseNumber)) {
+        verseNumber = Math.floor(Math.random() * 700) + 1;
+      }
+      const res = await fetch(`https://gita-api.vercel.app/odi/verse/${verseNumber}`);
+      if (!res.ok) {
+        const error = await res.json();
+        throw new Error(
+          `API request failed with status ${res.status} and message: ${error.detail?.[0]?.msg || error.message}`
+        );
+      }
+      const json = await res.json();
+      const gitaVerse = `
+🕉 *Bhagavad Gita: Sacred Teachings*\n
+📜 *Chapter ${json.chapter_no}: ${json.chapter_name}*\n
+Verse ${json.verse_no}:\n
+" ${json.verse} "\n
+*🔮 Translation:*\n
+${json.translation}\n
+*🧘‍♂️ Spiritual Insight (Purport):*\n
+${json.purport}`;
+      reply(gitaVerse);
+      //Audio sending removed
+    } catch (error) {
+      console.error(error);
+      reply("Error: " + error.message);
+    }
+  }
 }];
