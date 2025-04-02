@@ -112,6 +112,45 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     }
   }
 }, {
+  command: ["chatgpt"],
+  operate: async ({
+    m: _0x32242b, // unused in this example
+    reply: _0x39feca, // function to send the reply
+    text: _0x3d3d07  // user's question
+  }) => {
+    if (!_0x3d3d07) {
+      return _0x39feca("*Please ask a question*");
+    }
+
+    const apiKey = "08da4ef3bedbb2a90a"; // Your API key
+    const apiUrl = `https://api.nexoracle.com/ai/chatgpt?apikey=${apiKey}&prompt=${encodeURIComponent(_0x3d3d07)}`;
+
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json(); // Attempt to get error details
+        const errorMessage = errorData.message || `HTTP error! status: ${response.status}`;
+        return _0x39feca(`*An error occurred: ${errorMessage}*`);
+      }
+
+      const data = await response.json();
+
+      if (data.status !== 200) {
+        return _0x39feca(`*API error: ${data.status} - ${data.message || "Unknown error"}*`);
+      }
+
+      //Handle different response structures.  NexOracle's response seems inconsistent based on your example.
+      const result = data.result || data.message || "No response from API"; //Fallback if result is missing
+
+      _0x39feca(result);
+
+    } catch (error) {
+      console.error("Error fetching response from ChatGPT API:", error);
+      _0x39feca("*An error occurred while fetching the response from ChatGPT API.*");
+    }
+  }
+}, {
   command: ["openai"], // Changed command to "openai"
   operate: async ({
     m: _0x3db143,
