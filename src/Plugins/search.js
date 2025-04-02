@@ -123,6 +123,34 @@ module.exports = [{
     }
   }
 }, {
+  command: ["lyrics2"],
+  operate: async ({ m, text, Cypher, reply }) => {
+    if (!text) {
+      return reply("Provide a song name.");
+    }
+    try {
+      const apiUrl = `https://api.popcat.xyz/lyrics?song=${encodeURIComponent(text)}`;
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        return reply(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      if (!data.title || !data.artist || !data.lyrics) {
+        return reply("Lyrics not found for this song."); //Handle cases where the API doesn't find lyrics
+      }
+
+      const lyrics = `🎵 *Lyrics for:* ${data.title} - ${data.artist}\n\n${data.lyrics}`;
+      Cypher.sendMessage(m.chat, { text: lyrics }, { quoted: m });
+    } catch (error) {
+      console.error("❌ Unable to fetch lyrics:", error);
+      reply("❌ Unable to fetch lyrics.");
+    }
+  }
+}, {
   command: ["shazam", "find", "whatmusic"],
   operate: async ({
     m: _0x4bbe0b,
