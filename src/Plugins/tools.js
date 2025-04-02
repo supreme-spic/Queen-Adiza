@@ -221,6 +221,39 @@ module.exports = [{
     }
   }
 }, {
+  command: ["tempmail"],
+  operate: async ({
+    reply
+  }) => {
+    try {
+      const apiUrl = "https://bk9.fun/tools/tempmail";
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        return reply(`API request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status) {
+        const email = data.BK9[0]; // Extract the email address from the response.
+        const expiry = data.BK9[2]; // Extract the expiry time
+
+        if(email){
+          reply(`Your temporary email address is: ${email}\nIt will expire approximately on: ${expiry}`);
+        }else{
+          reply("*No email address found in API response*");
+        }
+
+      } else {
+        reply(data.message || "API request failed.");
+      }
+    } catch (error) {
+      console.error("Error fetching temporary email:", error);
+      reply("An error occurred while fetching a temporary email address.");
+    }
+  }
+}, {
   command: ["obfuscate"],
   operate: async ({
     m: _0x5a397e,
