@@ -318,6 +318,41 @@ module.exports = [{
     }
   }
 }, {
+  command: ["base64decoder", "decode"],
+  operate: async ({ m, text, reply, prefix, command }) => {
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [base64 text to decode]*`);
+    }
+
+    const apiKey = "08da4ef3bedbb2a90a"; // Your API key
+    const apiUrl = `https://api.nexoracle.com/converter/decode-base64?apikey=${apiKey}&text=${encodeURIComponent(text.trim())}`;
+
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        const errorMessage = errorData.message || `HTTP error! status: ${response.status}`;
+        return reply(`API request failed with status ${response.status}: ${errorMessage}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status === 200) {
+        if (data.result && data.result.text) {
+          reply(`Decoded text: \`${data.result.text}\``);
+        } else {
+          reply("*API returned a successful status but no decoded text.*");
+        }
+      } else {
+        reply(`API error: ${data.status} - ${data.message || "Unknown error"}`);
+      }
+    } catch (error) {
+      console.error("Error decoding Base64:", error);
+      reply("An error occurred while decoding the Base64 text.");
+    }
+  }
+}, {
   command: ["qrcode"],
   operate: async ({
     Cypher: _0x8342f7,
