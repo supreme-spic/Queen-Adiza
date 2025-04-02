@@ -11,53 +11,32 @@ const {
 } = require("file-type");
 const path = require("path");
 module.exports = [{
-  command: ["matrix"],
-  operate: async ({
-    m: _0x4d6bf5,
-    reply: _0x2fb246,
-    text: _0x6224bb
-  }) => {
-    if (!_0x6224bb) {
-      return _0x2fb246("*Please ask a question*");
-    }
-    try {
-      let _0x25eb02 = await fetch("https://api.siputzx.my.id/api/ai/blackboxai?content=" + encodeURIComponent(_0x6224bb));
-      let _0x56fa21 = await _0x25eb02.json();
-      if (_0x25eb02.status !== 200 || !_0x56fa21.status || !_0x56fa21.data) {
-        return _0x2fb246("*Please try again later or try another command!*");
-      } else {
-        _0x2fb246(_0x56fa21.data);
-      }
-    } catch (_0x55300f) {
-      console.error("Error fetching response from JINWOO-Ai API:", _0x55300f);
-      _0x2fb246("An error occurred while fetching the response from JinwooAI API.");
-    }
+  command: ["jarvis"],
+operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
+  if (!_0x6224bb) {
+    return _0x2fb246("*Please ask a question*");
   }
-}, {
-  command: ["dalle"],
-  operate: async ({
-    Cypher: _0x4cdac9,
-    m: _0x61b554,
-    reply: _0xdc737c,
-    text: _0x4058ab
-  }) => {
-    if (!_0x4058ab) {
-      return _0xdc737c("*Please enter a query!*");
+  try {
+    const apiUrl = `https://bk9.fun/ai/jeeves-chat?q=${encodeURIComponent(_0x6224bb)}`;
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+      return _0x2fb246(`API request failed with status ${response.status}: ${errorData.message || response.statusText}`);
     }
-    const _0x22fb04 = "https://api.siputzx.my.id/api/ai/stable-diffusion?prompt=" + encodeURIComponent(_0x4058ab);
-    try {
-      await _0x4cdac9.sendMessage(_0x61b554.chat, {
-        image: {
-          url: _0x22fb04
-        }
-      }, {
-        quoted: _0x61b554
-      });
-    } catch (_0x37249c) {
-      console.error("Error generating image:", _0x37249c);
-      _0xdc737c("*An error occurred while generating the image.*");
+    const data = await response.json();
+
+    // Handle the BK9.fun API response structure
+    if (data.status) {
+      const apiResponse = data.BK9 || "*No answer found in API response*";
+      _0x2fb246(apiResponse);
+    } else {
+      _0x2fb246(data.message || "API request failed."); //This part might need adjustment depending on error handling in bk9.fun API.  It might not have a 'message' field.
     }
+  } catch (error) {
+    console.error("Error fetching response from BK9 API:", error);
+    _0x2fb246("An error occurred while fetching the response from BK9 API.");
   }
+}
 }, {
   command: ["adiza"],
   operate: async ({
