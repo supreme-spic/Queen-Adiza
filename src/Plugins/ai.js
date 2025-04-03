@@ -1,5 +1,5 @@
 function hi() {
-  console.log("Hello World!");
+  console.log("Welcome To The MatrixWorld!");
 }
 hi();
 const fetch = require("node-fetch");
@@ -14,7 +14,7 @@ module.exports = [{
   command: ["jarvis"],
 operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
   if (!_0x6224bb) {
-    return _0x2fb246("*Please ask a question*");
+    return _0x2fb246("*I'm a fountain of knowledge (or at least a leaky faucet 💧). Ask away! 😄*");
   }
   try {
     const apiUrl = `https://bk9.fun/ai/jeeves-chat?q=${encodeURIComponent(_0x6224bb)}`;
@@ -45,7 +45,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     text: _0x2c2b5f
   }) => {
     if (!_0x2c2b5f) {
-      return _0x1bf876("*Please ask a question*");
+      return _0x1bf876("*Alright, question time! 🎤  What's on your mind sweety🥰?*");
     }
     try {
       let _0x357f0c = await fetch("https://bk9.fun/ai/gemini?q=" + encodeURIComponent(_0x2c2b5f));
@@ -95,7 +95,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     text: _0x3d3d07
   }) => {
     if (!_0x3d3d07) {
-      return _0x39feca("*Please ask a question*");
+      return _0x39feca("*Fire away! 🔥  I'm ready for anything. (almost anything 😉)*");
     }
     try {
       const _0x2a527d = "https://api.siputzx.my.id/api/ai/dbrx-instruct?content=" + encodeURIComponent(_0x3d3d07);
@@ -119,7 +119,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     text: _0x3d3d07  // user's question
   }) => {
     if (!_0x3d3d07) {
-      return _0x39feca("*Please ask a question*");
+      return _0x39feca("*Spill the tea! ☕ What burning question do you have?*");
     }
 
     const apiKey = "08da4ef3bedbb2a90a"; // Your API key
@@ -151,6 +151,45 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     }
   }
 }, {
+  command: ["matrix"],
+  operate: async ({
+    m: _0x32242b, // unused in this example
+    reply: _0x39feca, // function to send the reply
+    text: _0x3d3d07  // user's question
+  }) => {
+    if (!_0x3d3d07) {
+      return _0x39feca("*My brain is tingling with anticipation! 🧠⚡ Ask me, ask me!*");
+    }
+
+    const apiKey = "MatrixZatKing"; // Your API key
+    const apiUrl = `https://api.nexoracle.com/ai/gemini?apikey=${apiKey}&prompt=${encodeURIComponent(_0x3d3d07)}`;
+
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json(); // Attempt to get error details
+        const errorMessage = errorData.message || `HTTP error! status: ${response.status}`;
+        return _0x39feca(`*An error occurred: ${errorMessage}*`);
+      }
+
+      const data = await response.json();
+
+      if (data.status !== 200) {
+        return _0x39feca(`*API error: ${data.status} - ${data.message || "Unknown error"}*`);
+      }
+
+      //Handle different response structures.  NexOracle's response seems inconsistent based on your example.
+      const result = data.result || data.message || "No response from API"; //Fallback if result is missing
+
+      _0x39feca(result);
+
+    } catch (error) {
+      console.error("Error fetching response from matrix API:", error);
+      _0x39feca("*An error occurred while fetching the response from gemini API.*");
+    }
+  }
+}, {
   command: ["openai"], // Changed command to "openai"
   operate: async ({
     m: _0x3db143,
@@ -158,7 +197,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     text: _0x3ad335
   }) => {
     if (!_0x3ad335) {
-      return _0xeb9056("*Please ask a question*");
+      return _0xeb9056("*Don't leave me hanging! 🐒  What's the big question?*");
     }
     try {
       const newApiUrl = `https://vapis.my.id/api/openai?q=${encodeURIComponent(_0x3ad335)}`; // Updated API URL
@@ -248,7 +287,7 @@ operate: async ({ m: _0x4d6bf5, reply: _0x2fb246, text: _0x6224bb }) => {
     text: _0x458a02
   }) => {
     if (!_0x458a02) {
-      return _0x37bf4b("*Please ask a question*");
+      return _0x37bf4b("*Unleash your inner Sherlock! 🕵️‍♀️ What mysteries need solving?*");
     }
     try {
       const _0x52701b = "https://api.siputzx.my.id/api/ai/gpt3?prompt=you%20are%20an%20helpful%20assistant%20providing%20detailed%20and%20friendly%20responses&content=" + encodeURIComponent(_0x458a02);
