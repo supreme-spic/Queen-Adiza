@@ -16,7 +16,7 @@ module.exports = [{
     text: _0x1c5889
   }) => {
     if (!_0x1c5889) {
-      return _0x4f3082("⌛Enter a word to define.");
+      return _0x4f3082("Ready to rumble with words? 💪📖  What word is puzzling you? 🤔 Let's conquer the dictionary! 📚⚔️ Tell me your word and let's see what we find! 🤩.");
     }
     try {
       const _0x498ddf = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + _0x1c5889);
@@ -43,7 +43,7 @@ module.exports = [{
     reply: _0x32ec02
   }) => {
     if (!_0x558d73) {
-      return _0x32ec02("☺What do you want to define my gee?😎");
+      return _0x32ec02("Hey there, word wizard! ✨ What word are you curious about today? 🤔 Let's dive into the dictionary! 📚📖  Tell me your word and let's have some fun! 🥳?");
     }
     try {
       const {
