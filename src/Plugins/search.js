@@ -8,7 +8,7 @@ const fs = require("fs");
 const moment = require("moment-timezone");
 const yts = require("yt-search");
 module.exports = [{
-  command: ["define"],
+  command: ["dictionary"],
   operate: async ({
     Cypher: _0x52ad33,
     m: _0x236b21,
@@ -16,7 +16,7 @@ module.exports = [{
     text: _0x1c5889
   }) => {
     if (!_0x1c5889) {
-      return _0x4f3082("Enter a word to define.");
+      return _0x4f3082("⌛Enter a word to define.");
     }
     try {
       const _0x498ddf = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + _0x1c5889);
@@ -35,7 +35,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["define2"],
+  command: ["dictionary2"],
   operate: async ({
     m: _0x3bef50,
     text: _0x558d73,
@@ -43,7 +43,7 @@ module.exports = [{
     reply: _0x32ec02
   }) => {
     if (!_0x558d73) {
-      return _0x32ec02("What do you want to define?");
+      return _0x32ec02("☺What do you want to define my gee?😎");
     }
     try {
       const {
