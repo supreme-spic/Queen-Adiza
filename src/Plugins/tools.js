@@ -255,6 +255,43 @@ module.exports = [{
     }
   }
 }, {
+  command: ["speak"], // Changed command name for clarity
+  operate: async ({ m, text, reply, prefix, command, Cypher }) => {
+    const apiKey = "MatrixZatKing";
+    const voiceId = "21m00Tcm4TlvDq8ikWAM"; // ElevenLabs voice ID
+
+    if (!text) {
+      return reply(`*Usage: ${prefix}${command} [text]*`);
+    }
+
+    const textToSpeak = encodeURIComponent(text.trim());
+    const apiUrl = `https://api.nexoracle.com/tts/elevenlabs?apikey=${apiKey}&id=${voiceId}&text=${textToSpeak}`;
+
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Unable to parse error response" }));
+        const errorMessage = errorData.message || `HTTP error! status: ${response.status}`;
+        return reply(`API request failed with status ${response.status}: ${errorMessage}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status === 200 && data.result) {
+        const audioUrl = data.result;
+        const audioBuffer = await fetch(audioUrl).then(res => res.buffer()); //Download the audio
+
+        await Cypher.sendMessage(m.chat, { audio: audioBuffer, mimetype: 'audio/mpeg' }, { quoted: m }); //Send audio message
+      } else {
+        reply(`API error: ${data.status} - ${data.message || "Unknown error"}`);
+      }
+    } catch (error) {
+      console.error("Error generating TTS audio:", error);
+      reply("An error occurred while generating the TTS audio.");
+    }
+  }
+}, {
   command: ["calc"],
   operate: async ({
     m,
