@@ -205,4 +205,30 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 ![MIT License](https://img.shields.io/badge/License-green.svg)
 
 
+### ⚠️ Disclaimer
+
+- 🔒 This bot is **not affiliated with WhatsApp Inc.** Use it responsibly.
+- 🚨 **Misuse may lead to account bans.**
+- ❌ **Cloning or modifying the bot without permission is prohibited.**
+
+---
+
+### 💡 Credits & Contributors
+
+> **MATRIX BOT Owner**
+- [Matrix](https://github.com/Matri199) 
+
+> **Helper**
+- [Malvin King](https://github.com/XdKing2)
+
+
+ > **BASE BOT Owner**
+- [Tylor](https://github.com/Dark-Xploit) 
+
+- Contributions include **bot plugins, command files, and script optimizations.**
+- 
+- Special thanks to [Tylor](https://github.com/Dark-Xploit) Owner of the bot base
+
+---
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
