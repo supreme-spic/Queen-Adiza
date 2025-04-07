@@ -184,6 +184,32 @@ module.exports = [{
     }
   }
 }, {
+  command: ["sticker-search"],
+  operate: async ({ Cypher: David, m, reply, text }) => {
+    if (!text) return reply('Enter the theme!');
+
+    try {
+      const response = await fetch('https://endpoint.web.id/search/sticker?key=gojou&query=' + encodeURIComponent(text));
+      const tick = await response.json();
+
+      if (tick.status) {
+        const result = tick.result;
+        let responseMessage = `*Title:* ${result.title}\n*Author:* ${result.author}\n*Author Link:* ${result.author_link}\n\n*Stickers:*\n`;
+
+        result.sticker.forEach((stickerUrl, index) => {
+          responseMessage += `Sticker ${index + 1}: ${stickerUrl}\n`;
+        });
+
+        reply(responseMessage);
+      } else {
+        reply('No results found.');
+      }
+    } catch (error) {
+      console.error("Error fetching sticker search results:", error);
+      reply('There was an error!');
+    }
+  }
+}, {
   command: ["weather"],
   operate: async ({
     Cypher: _0x45dda3,
