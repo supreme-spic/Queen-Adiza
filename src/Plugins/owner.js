@@ -145,7 +145,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["dlvo", "vv", "rvo"],
+  command: ["vv1"],
   operate: async ({
     Cypher: _0x3c3154,
     m: _0x1634d2,
@@ -186,6 +186,40 @@ module.exports = [{
     } catch (_0x37a3e3) {
       console.error(_0x37a3e3);
       _0x49f60f("*Failed to retrieve media. The message might not be a valid view-once media.*");
+    }
+  }
+}, {
+  command: ["vv2"],
+  operate: async ({ Cypher: David, m, reply, isCreator, mime, quoted, q }) => {
+    if (!isCreator) return reply('For My Owner Only');
+
+    try {
+      let mediaType;
+
+      if (/video/.test(mime)) {
+        mediaType = 'video';
+      } else if (/image/.test(mime)) {
+        mediaType = 'image';
+      } else if (/audio/.test(mime)) {
+        mediaType = 'audio';
+      } else {
+        return reply('Reply to a Video, Image, or Audio You Want to Save');
+      }
+
+      const mediaFile = await David.downloadAndSaveMediaMessage(quoted);
+      const messageOptions = {
+        caption: q || ''
+      };
+
+      messageOptions[mediaType] = {
+        url: mediaFile
+      };
+
+      await David.sendMessage(m.sender, messageOptions, { quoted: m });
+      await David.sendMessage(m.chat, { react: { text: `✅`, key: m.key } });
+    } catch (error) {
+      console.error("Error saving media:", error);
+      reply('Failed to save and send the media.');
     }
   }
 }, {
@@ -242,6 +276,27 @@ module.exports = [{
     }, {
       quoted: _0x2599bb
     });
+  }
+}, {
+  command: ["getpp"],
+  operate: async ({ Cypher: David, m, reply }) => {
+    if (!m.quoted && (!m.mentionedJid || m.mentionedJid.length === 0)) {
+      return reply(`Reply to someone's message or tag a user with ${prefix}getpp`);
+    }
+
+    try {
+      const targetUser = m.quoted ? m.quoted.sender : m.mentionedJid[0];
+      const profilePicUrl = await David.profilePictureUrl(targetUser, 'image');
+      const responseMessage = `Profile picture of @${targetUser.split('@')[0]}`;
+      await David.sendMessage(m.chat, {
+        image: { url: profilePicUrl },
+        caption: responseMessage,
+        mentions: [targetUser]
+      });
+    } catch (error) {
+      console.error("Error fetching profile picture:", error);
+      reply("Couldn't fetch profile picture. The user might not have a profile picture or an error occurred.");
+    }
   }
 }, {
   command: ["groupid", "idgc"],
