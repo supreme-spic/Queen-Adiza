@@ -545,6 +545,23 @@ module.exports = [{
     }
   }
 }, {
+  command: ["channel", "followchannel"],
+  operate: async ({ Cypher: David, m, reply }) => {
+    try {
+      await David.sendMessage(m.chat, {
+        react: {
+          text: `💝`,
+          key: m.key
+        }
+      });
+
+      reply(`*🌹FOLLOW OUR OFFICIAL CHANNEL🌹*\n\nhttps://chat.whatsapp.com/Iz8jA4DdW9qCQpR0YbMlnz`);
+    } catch (error) {
+      console.error("Error sending channel link:", error);
+      reply("Failed to share the channel link.");
+    }
+  }
+}, {
   command: ["sticker", "s"],
   operate: async ({
     Cypher: _0x234f03,
