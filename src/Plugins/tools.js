@@ -189,6 +189,67 @@ module.exports = [{
     }
   }
 }, {
+  command: ["modapk"],
+  operate: async ({ Cypher: David, m, reply, text, command }) => {
+    const axios = require('axios');
+    const cheerio = require('cheerio');
+
+    async function mods(apk) {
+      const url = `https://m.happymod.com/search.html?q=${apk}`;
+      const response = await axios.get(url);
+      const html = response.data;
+      const $ = cheerio.load(html);
+
+      const apps = [];
+
+      $('.app-info-list .s-app-block').each((index, element) => {
+        const app = {
+          creator: '`Matrix King`',
+          status: 200,
+          title: $(element).find('.info-wrap .nowrap a').text().trim(),
+          image: $(element).find('.img img').attr('data-src'),
+          downloadUrl: `https://m.happymod.com${$(element).find('.down a').attr('href')}`
+        };
+        apps.push(app);
+        if (apps.length >= 5) return false;
+      });
+
+      return apps;
+    }
+
+    if (!text) {
+      return reply(`Enter Text, *Like This Format*: .${command} minecraft`);
+    }
+
+    try {
+      const response = await mods(text);
+      let result = '';
+
+      response.forEach((app, index) => {
+        result += `*${index + 1}*. ${app.title}:\n`;
+        result += `∘ Download ${app.downloadUrl}\n\n`;
+      });
+
+      await David.sendMessage(m.chat, {
+        text: result,
+        contextInfo: {
+          externalAdReply: {
+            showAdAttribution: false,
+            title: `M O D S  S E A R C H`,
+            body: `Looking for Cool and Free Apk Mods!`,
+            sourceUrl: 'https://m.happymod.com',
+            thumbnailUrl: 'https://imgur.com/a/PD8nT5X',
+            mediaType: 2,
+            renderLargerThumbnail: true
+          }
+        }
+      });
+    } catch (error) {
+      console.error("Error fetching mod search results:", error);
+      reply("Something went wrong while searching for mods.");
+    }
+  }
+}, {
   command: ["tempmail"],
   operate: async ({
     reply
