@@ -393,6 +393,24 @@ module.exports = [{
     }
   }
 }, {
+  command: ["listblock"],
+  operate: async ({ Cypher: David, reply, isCreator }) => {
+    if (!isCreator) return reply("For My Owner Only");
+
+    try {
+      const block = await David.fetchBlocklist();
+      if (!block || block.length === 0) {
+        return reply("List Block:\n\n*0* Blocked");
+      }
+
+      const blockList = block.map(v => '• ' + v.replace(/@.+/, '')).join('\n');
+      reply(`List Block:\n\n*${block.length}* Blocked\n${blockList}`);
+    } catch (error) {
+      console.error("Error fetching block list:", error);
+      reply("Failed to retrieve block list.");
+    }
+  }
+}, {
   command: ["join"],
   operate: async ({
     Cypher: _0x16a3ee,
@@ -673,6 +691,25 @@ module.exports = [{
     }
     await _0x366cdf.updateReadReceiptsPrivacy(_0x527575);
     await _0x727a53(_0x3fee5b.done);
+  }
+}, {
+  command: ["clearchat"],
+  operate: async ({ Cypher: Adiza, m }) => {
+    try {
+      await Adiza.chatModify(
+        {
+          delete: true,
+          lastMessages: [{ key: m.key, messageTimestamp: m.messageTimestamp }]
+        },
+        m.chat
+      );
+
+      await Adiza.sendMessage(m.chat, {
+        react: { text: "✅", key: m.key }
+      });
+    } catch (error) {
+      console.error("Error clearing chat:", error);
+    }
   }
 }, {
   command: ["reportbug"],
