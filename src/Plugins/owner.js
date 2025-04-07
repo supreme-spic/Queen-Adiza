@@ -357,6 +357,42 @@ module.exports = [{
     });
   }
 }, {
+  command: ["pinchat"],
+  operate: async ({ Cypher: David, m, reply, isCreator }) => {
+    if (!isCreator) return reply('This command is for the owner only.');
+
+    try {
+      await David.chatModify({ pin: true }, m.chat);
+      await David.sendMessage(m.chat, {
+        react: {
+          text: `📌`,
+          key: m.key
+        }
+      });
+    } catch (error) {
+      console.error("Error pinning chat:", error);
+      reply('Failed to pin the chat.');
+    }
+  }
+}, {
+  command: ["unpinchat"],
+  operate: async ({ Cypher: David, m, reply, isCreator }) => {
+    if (!isCreator) return reply('This command is for the owner only.');
+
+    try {
+      await David.chatModify({ pin: false }, m.chat);
+      await David.sendMessage(m.chat, {
+        react: {
+          text: `✅`,
+          key: m.key
+        }
+      });
+    } catch (error) {
+      console.error("Error unpinning chat:", error);
+      reply('Failed to unpin the chat.');
+    }
+  }
+}, {
   command: ["join"],
   operate: async ({
     Cypher: _0x16a3ee,
