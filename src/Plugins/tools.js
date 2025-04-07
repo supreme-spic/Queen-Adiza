@@ -255,6 +255,27 @@ module.exports = [{
     }
   }
 }, {
+  command: ["getpp"],
+  operate: async ({ Cypher: David, m, reply }) => {
+    if (!m.quoted && (!m.mentionedJid || m.mentionedJid.length === 0)) {
+      return reply(`Reply to someone's message or tag a user with ${prefix}getpp`);
+    }
+
+    try {
+      const targetUser = m.quoted ? m.quoted.sender : m.mentionedJid[0];
+      const profilePicUrl = await David.profilePictureUrl(targetUser, 'image');
+      const responseMessage = `Profile picture of @${targetUser.split('@')[0]}`;
+      await David.sendMessage(m.chat, {
+        image: { url: profilePicUrl },
+        caption: responseMessage,
+        mentions: [targetUser]
+      });
+    } catch (error) {
+      console.error("Error fetching profile picture:", error);
+      reply("Couldn't fetch profile picture. The user might not have a profile picture or an error occurred.");
+    }
+  }
+}, {
   command: ["speak"], // Changed command name for clarity
   operate: async ({ m, text, reply, prefix, command, Cypher }) => {
     const apiKey = "MatrixZatKing";
