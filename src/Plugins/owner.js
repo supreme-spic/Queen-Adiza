@@ -299,6 +299,38 @@ module.exports = [{
     }
   }
 }, {
+  command: ["userinfo"],
+  operate: async ({ Cypher: David, m, reply, prefix }) => {
+    if (!m.quoted && (!m.mentionedJid || m.mentionedJid.length === 0)) {
+      return reply(`Reply to someone's message or tag a user with ${prefix}userinfo`);
+    }
+
+    try {
+      const targetUser = m.quoted ? m.quoted.sender : m.mentionedJid[0];
+      const phoneNumber = targetUser.split('@')[0];
+
+      // Fetch profile picture
+      const profilePicUrl = await David.profilePictureUrl(targetUser, 'image').catch(() => null);
+
+      const userInfoMessage = `
+*User Info:*
+- JID: ${targetUser}
+- Phone Number: ${phoneNumber}
+${profilePicUrl ? `- Profile Picture: [Click Here](${profilePicUrl})` : '- No Profile Picture'}
+      `.trim();
+
+      await David.sendMessage(m.chat, {
+        image: profilePicUrl ? { url: profilePicUrl } : undefined,
+        caption: userInfoMessage,
+        mentions: [targetUser]
+      });
+
+    } catch (error) {
+      console.error("Error fetching user info:", error);
+      reply("Couldn't fetch user information. The user might have privacy settings enabled.");
+    }
+  }
+}, {
   command: ["groupid", "idgc"],
   operate: async ({
     Cypher: _0x858a65,
