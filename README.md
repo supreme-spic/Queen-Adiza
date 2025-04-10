@@ -218,17 +218,6 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 > **MATRIX BOT Owner**
 - [Matrix](https://github.com/Matri199) 
 
-> **Helper**
-- [Malvin King](https://github.com/XdKing2)
-
-
- > **BASE BOT Owner**
-- [Tylor](https://github.com/Dark-Xploit) 
-
-- Contributions include **bot plugins, command files, and script optimizations.**
-- 
-- Special thanks to [Tylor](https://github.com/Dark-Xploit) Owner of the bot base
-
 ---
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
