@@ -217,7 +217,3 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 
 > **MATRIX BOT Owner**
 - [Matrix](https://github.com/Matri199) 
-
----
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/>
