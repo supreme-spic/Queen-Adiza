@@ -103,6 +103,50 @@ module.exports = [{
     }
   }
 }, {
+  command: ["quotevoice", "motispeech"],
+  operate: async ({ Cypher: David, m, reply }) => {
+    try {
+      const res = await fetch("https://favqs.com/api/qotd");
+      const data = await res.json();
+
+      const quote = data.quote?.body;
+      const author = data.quote?.author;
+      if (!quote || !author) return reply("Couldn't fetch quote.");
+
+      const fullText = `${quote} — ${author}`;
+
+      // TTSMP3 unofficial API (Google TTS endpoint)
+      const ttsRes = await axios({
+        method: "POST",
+        url: "https://ttsmp3.com/makemp3_new.php",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        data: new URLSearchParams({
+          msg: fullText,
+          lang: "Joey", // You can try: Ivy, Brian, Kimberly, etc.
+          source: "ttsmp3"
+        }).toString()
+      });
+
+      const audioUrl = ttsRes.data.URL;
+      if (!audioUrl) return reply("TTS failed.");
+
+      const audioData = await axios.get(audioUrl, { responseType: "arraybuffer" });
+      const audioBuffer = Buffer.from(audioData.data);
+
+      await David.sendMessage(m.chat, {
+        audio: audioBuffer,
+        mimetype: "audio/mp4", // WhatsApp plays this format well
+        ptt: true
+      }, { quoted: m });
+
+    } catch (err) {
+      console.error("TTS Error:", err);
+      reply("Failed to create voice note.");
+    }
+  }
+}, {
   command: ["trivia"],
   operate: async ({
     Cypher: _0x3f1b56,
