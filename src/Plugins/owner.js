@@ -747,6 +747,54 @@ module.exports = [{
     });
   }
 }, {
+  command: ["biography"],
+  operate: async ({
+    Cypher: _0x56a354,
+    m: _0x4303a2,
+    reply: _0x5aafa4,
+    text: _0x32bfab
+  }) => {
+    const biography = `
+      *🔮Creator's Biography🔮:*
+
+      👋🌹Hello, I am 𝗠𝗮𝘁𝗿𝗶𝘅-𝗫-𝗞𝗶𝗻𝗴, from Ghana 🇬🇭, the developer behind this bot. I have been passionate about programming and AI development for many years. My primary focus is on creating bots and automating tasks that make life easier for users.
+
+      *🔑Key Points🔑:*
+      - I'm a self-taught developer with a deep interest in AI.
+      - My work involves building chatbots, web applications, and exploring machine learning.
+      - I enjoy solving problems and contributing to open-source projects.
+
+      *🕴Fun Facts🕴:*
+      - My favorite programming language is JavaScript, but I also enjoy Python.
+      - I believe in the power of automation to simplify everyday tasks.
+      - In my free time, I love exploring new tech and learning new skills.
+
+      Thank you for using this bot, and I hope you enjoy its features!
+
+      *🪩Social Media & Contact🪩:*
+      - Contact: 233593734312
+      - GitHub: github.com/Matri199
+      - Email: Matrixzat99@gmail.com
+      - Whatsapp: https://wa.me/message/65YSIVJZVUXVF1
+      - Telegram: https://t.me/MatriXXXXXXXXX
+      
+    `;
+
+    // Image URL or file path
+    const imageUrl = "https://files.catbox.moe/k33au9.jpeg";  // Replace with your image URL
+
+    // Send the biography and the image together
+    await _0x56a354.sendMessage(_0x4303a2.chat, {
+      text: biography
+    });
+
+    // Send the image separately
+    await _0x56a354.sendMessage(_0x4303a2.chat, {
+      image: { url: imageUrl }, // If you have the image URL
+      caption: "*🌹Here's a picture of the creator!🌹*"
+    });
+  }
+}, {
   command: ["request"],
   operate: async ({
     m: _0xb45806,
