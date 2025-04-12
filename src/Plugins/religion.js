@@ -74,7 +74,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["gita", "gita-verse", "bhagavatgita"],
+  command: ["gitaa", "gita-verse", "bhagavatgita"],
   operate: async ({
     m,
     reply,
