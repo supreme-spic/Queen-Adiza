@@ -4,7 +4,7 @@ function hi() {
 hi();
 const fetch = require("node-fetch");
 module.exports = [{
-  command: ["bible"],
+  command: ["biblee"],
   operate: async ({
     m: _0x30299f,
     text: _0x2734ed,
