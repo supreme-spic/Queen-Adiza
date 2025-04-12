@@ -1,6 +1,6 @@
 /*
   project_name : ADIZA Bot
-  Version : 2.4.0
+  Version : 2.4.1
   Owner : Matrix King 
   Clone if you can😪
 
