@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Matrix X",
+  "author": "Matrix-X-King",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:baileys@^6.7.16",
