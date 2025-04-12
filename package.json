@@ -2,7 +2,6 @@
   "name": "Queen-Adiza",
   "version": "2.4.1",
   "description": "The best Whatsapp bot",
-  "commitHash": "da62cceab90bd2bdc441bb36711539c9330ab897",
   "main": "index.js",
   "engines": {
     "node": ">= 21.x",
