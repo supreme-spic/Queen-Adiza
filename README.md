@@ -216,4 +216,4 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 ### 💡 Credits & Contributors
 
 > **MATRIX BOT Owner**
-- [Matrix](https://github.com/Matri199) 
+- [Matrix-X-King](https://github.com/Matri199) 
