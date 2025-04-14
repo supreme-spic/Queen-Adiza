@@ -18,6 +18,7 @@ const {
 } = require("./lib/color");
 const fs = require("fs");
 const pino = require("pino");
+console.log("Pino loaded:", typeof pino);
 const path = require("path");
 const NodeCache = require("node-cache");
 const msgRetryCounterCache = new NodeCache();
