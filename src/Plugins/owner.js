@@ -477,7 +477,7 @@ module.exports = [{
       reply("❌ *Update failed.* Please try again or update manually.");
     }
   }
-} {
+}, {
   command: ["userinfo"],
   operate: async ({ Cypher: Matrix, m, reply, prefix }) => {
     if (!m.quoted && (!m.mentionedJid || m.mentionedJid.length === 0)) {
