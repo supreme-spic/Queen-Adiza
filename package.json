@@ -46,6 +46,7 @@
     "perf_hooks": "0.0.1",
     "performance-now": "^2.1.0",
     "pino": "^8.14.1",
+"pino-pretty": "^10.3.1"
     "steno": "^1.0.0",
     "yargs": "^17.7.2",
     "yt-search": "^2.10.4"
