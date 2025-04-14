@@ -1,1 +1,1 @@
-Queen Adiza
+Queen-Adiza-Bot
