@@ -103,7 +103,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["quotevoice", "motispeech"],
+  command: ["quotevoice", "motivspeech"],
   operate: async ({ Cypher: David, m, reply }) => {
     try {
       const res = await fetch("https://favqs.com/api/qotd");
