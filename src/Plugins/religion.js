@@ -31,7 +31,7 @@ module.exports = [{
     }
   }
 }, {
-  command: ["quraan"],
+  command: ["quran"],
   operate: async ({
     m: _0x3752ef,
     text: _0x20a5d9,
