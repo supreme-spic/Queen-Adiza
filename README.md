@@ -17,7 +17,7 @@ src="https://files.catbox.moe/sql1zr.jpg?">
 <a href="https://github.com/Matri199/Queen-Adiza/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Matri199/Queen-Adiza?color=blue&style=flat-square"></a>
 <a href="https://github.com/Matri199/Queen-Adiza/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Matri199/Queen-Adiza?label=Watchers&color=blue&style=flat-square"></a>
 <a href="https://github.com/Matri199/Queen-Adiza/"><img title="Size" src="https://img.shields.io/github/repo-size/Matri199/Queen-Adiza?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMatri199%2FQUEEN-ADIZA&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkingmalvn%2FQueen-Adiza&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
 <a href="https://github.com/Matri199/Queen-Adiza/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;</a>
 <p align="center"><img src="https://profile-counter.glitch.me/{Queen-Adiza}/count.svg" alt="Matri199 :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Matri199}/count.svg" /></p>
 <p align="center">
@@ -49,7 +49,7 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 
 > To deploy on render , generate your session ID from the link below:
 <p align="left">
-  <a href="https://queen-adiza-session-67e8172e09cb.herokuapp.com/?">
+  <a href="https://adiza-session-p8kp.onrender.com/?">
     <img src="https://img.shields.io/badge/%F0%9F%9A%80%20GET%20PAIR%20CODE%20WEB-ffcc00?style=for-the-badge"/>
   </a>
 </p>
@@ -205,15 +205,4 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 ![MIT License](https://img.shields.io/badge/License-green.svg)
 
 
-### ⚠️ Disclaimer
-
-- 🔒 This bot is **not affiliated with WhatsApp Inc.** Use it responsibly.
-- 🚨 **Misuse may lead to account bans.**
-- ❌ **Cloning or modifying the bot without permission is prohibited.**
-
----
-
-### 💡 Credits & Contributors
-
-> **MATRIX BOT Owner**
-- [𝗠𝗮𝘁𝗿𝗶𝘅-𝗫-𝗞𝗶𝗻𝗴](https://github.com/Matri199) 
+<a><img src='https://i.imgur.com/LyHic3i.gif'/>
