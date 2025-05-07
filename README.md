@@ -209,11 +209,11 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 
 ``🚀𝙈𝘼𝙏𝙍𝙄𝙓 𝘽𝙊𝙏 𝙊𝙒𝙉𝙀𝙍🚀``
 
-**© BASE Bot OWNER**
-```Tylor```
-contributions includes bot plugins, command files, & script optimization.  
+**🔮© BASE Bot OWNER🔮**
 
+```❤𝗧𝗬𝗟𝗢𝗥❤```
 
+`Special Thanks to my big brother, contributions includes bot plugins, command files, & script optimization.` 
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
