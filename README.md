@@ -204,5 +204,11 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 ##
 ![MIT License](https://img.shields.io/badge/License-green.svg)
 
+**© BASE Bot OWNER**
+```Tylor```
+contributions includes bot plugins, command files, & script optimization.  
+
+
+
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
