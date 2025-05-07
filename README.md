@@ -199,10 +199,15 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 </h2>
 
 - This bot is made for educational purposes `only` hence `DO NOT MISUSE`.
+- 
 
 **© MATRIX Bot**
 ##
 ![MIT License](https://img.shields.io/badge/License-green.svg)
+
+**💡𝗖𝗥𝗘𝗗𝗜𝗧𝗦 & 𝗖𝗢𝗡𝗧𝗥𝗜𝗕𝗨𝗧𝗢𝗥𝗦💡**
+
+``🚀𝙈𝘼𝙏𝙍𝙄𝙓 𝘽𝙊𝙏 𝙊𝙒𝙉𝙀𝙍🚀``
 
 **© BASE Bot OWNER**
 ```Tylor```
