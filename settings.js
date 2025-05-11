@@ -3,7 +3,7 @@
 // @project_name : MATRIX-X-KING
 // @author : MATRIX
 // @telegram : http://t.me/MatriXXXXXXXXX
-// @github : Matri199
+// @github : Matrix1999
 // @whatsapp : +233593734312
 
 //----------------------[ MATRIX-KING ]----------------------//
