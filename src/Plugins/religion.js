@@ -31,6 +31,31 @@ ${chapterData.text}\n`;
     }
   }
 }, {
+  command: ["torah"],
+  operate: async ({ reply, args }) => {
+    const reference = args.join(" ");
+    if (!reference) {
+      return reply("Please provide a reference (e.g., *Genesis 1:1*).");
+    }
+
+    try {
+      // Sefaria expects references with spaces replaced by dots
+      const apiUrl = "https://www.sefaria.org/api/texts/" + reference.replace(/\s/g, ".");
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+
+      if (data.text) {
+        const text = Array.isArray(data.text) ? data.text.join("\n") : data.text;
+        reply(`✡ *Torah* 🔯\n*${reference}*\n\n${text}`);
+      } else {
+        reply("Verse not found. Try: *!torah Genesis 1:1*");
+      }
+    } catch (error) {
+      console.error("Torah API Error:", error);
+      reply("Failed to fetch. Check the reference.");
+    }
+  }
+}, {
   command: ["gita", "gita-verse", "bhagavatgita"],
   operate: async ({
     m,
