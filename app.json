@@ -4,7 +4,7 @@
   "description": "Adiza, the best WhatsApp Bot",
   "logo": "https://files.catbox.moe/rhjkfl.jpg",
   "keywords": ["whatsapp", "bot", "md"],
-  "repository": "https://github.com/Matri199/Queen-Adiza",
+  "repository": "https://github.com/Matrix1999/Queen-Adiza",
   "stack": "container",
   "scripts": {
     "start": "node index.js"
