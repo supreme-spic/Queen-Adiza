@@ -8,24 +8,24 @@ src="https://files.catbox.moe/sql1zr.jpg?">
 
    </p>
 <p align="center">
-<a href="https://github.com/Matri199"><img title="Author" src="https://img.shields.io/badge/Matrix King-blue?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@matrix-zat"><img title="Author" src="https://img.shields.io/badge/YT CHANNEL-darkred?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/233593734312"><img title="Author" src="https://img.shields.io/badge/Contact Me-darkgreen?style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/Matrix1999"><img title="Author" src="https://img.shields.io/badge/Matrix King-blue?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@matrix-zat"><img title="Author" src="https://img.shields.io/badge/YT CHANNEL-darkred?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/233593734312"><img title="Author" src="https://img.shields.io/badge/Contact Me-darkgreen?style=for-the-badge&logo=whatsapp"></a>
 <p/> 
 
  <p align="center">
-<a href="https://github.com/Matri199/followers"><img title="Followers" src="https://img.shields.io/github/followers/Matri199?color=purple&style=flat-square"></a>
-<a href="https://github.com/Matri199/Queen-Adiza/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Matri199/QUEEN-ADIZA?color=blue&style=flat-square"></a>
-<a href="https://github.com/Matri199/Queen-Adiza/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Matri199/Queen-Adiza?color=blue&style=flat-square"></a>
-<a href="https://github.com/Matri199/Queen-Adiza/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Matri199/Queen-Adiza?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/Matri199/Queen-Adiza/"><img title="Size" src="https://img.shields.io/github/repo-size/Matri199/Queen-Adiza?style=flat-square&color=green"></a>
+<a href="https://github.com/Matrix1999/followers"><img title="Followers" src="https://img.shields.io/github/followers/Matrix1999?color=purple&style=flat-square"></a>
+<a href="https://github.com/Matrix1999/Queen-Adiza/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Matrix1999/QUEEN-ADIZA?color=blue&style=flat-square"></a>
+<a href="https://github.com/Matrix1999/Queen-Adiza/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Matrix1999/Queen-Adiza?color=blue&style=flat-square"></a>
+<a href="https://github.com/Matrix1999/Queen-Adiza/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Matrix1999/Queen-Adiza?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Matrix1999/Queen-Adiza/"><img title="Size" src="https://img.shields.io/github/repo-size/Matrix1999/Queen-Adiza?style=flat-square&color=green"></a>
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkingmalvn%2FQueen-Adiza&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/Matri199/Queen-Adiza/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;</a>
-<p align="center"><img src="https://profile-counter.glitch.me/{Queen-Adiza}/count.svg" alt="Matri199 :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Matri199}/count.svg" /></p>
+<a href="https://github.com/Matrix1999/Queen-Adiza/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;</a>
+<p align="center"><img src="https://profile-counter.glitch.me/{Queen-Adiza}/count.svg" alt="Matrix1999 :: Visitor's Count" old_src="https://profile-counter.glitch.me/{Matrix1999}/count.svg" /></p>
 <p align="center">
-<a href="https://github.com/Matri199/Queen-"Adiza"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=flat-square&color=darkpink"></a> &nbsp;
+<a href="https://github.com/Matrix1999/Queen-"Adiza"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=flat-square&color=darkpink"></a> &nbsp;
   <img src="https://komarev.com/ghpvc/?username=QUEEN-ADIZA&label=VIEWS&style=flat-square&color=blue" />
 </a>
 <p align="center">
-  <a href="https://github.com/Matri199/Queen-Adiza"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v2.0-darkcyan.svg?style=for-the-badge&logo=appveyor" /></a>
+  <a href="https://github.com/Matrix1999/Queen-Adiza"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v2.0-darkcyan.svg?style=for-the-badge&logo=appveyor" /></a>
 
 <p align='center'>
     </p>
@@ -41,7 +41,7 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 
   <br>
     <p align="left">
-  <a href="https://github.com/Matri199/Queen-Adiza/fork"><img title="Queen-Adiza-V2" src="https://img.shields.io/badge/FORK-ADIZA-V2h?color=darkblue&style=for-the-badge&logo=stackshare"></a>
+  <a href="https://github.com/Matrix1999/Queen-Adiza/fork"><img title="Queen-Adiza-V2" src="https://img.shields.io/badge/FORK-ADIZA-V2h?color=darkblue&style=for-the-badge&logo=stackshare"></a>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
 
@@ -49,7 +49,7 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 
 > To deploy on render , generate your session ID from the link below:
 <p align="left">
-  <a href="https://adiza-session-ajl1.onrender.com/?">
+  <a href="https://adiza-session-p8kp.onrender.com/?">
     <img src="https://img.shields.io/badge/%F0%9F%9A%80%20GET%20PAIR%20CODE%20WEB-ffcc00?style=for-the-badge"/>
   </a>
 </p>
@@ -57,13 +57,13 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 
 ## `DEPLOYMENTS`
   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FMatri199%2FQueen-Adiza) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FMatrix1999%2FQueen-Adiza) 
 
 💯 safe
     <a><img src='https://i.imgur.com/LyHic3i.gif'/>
 
 
-[![Deploy on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://repl.it/github/Matri199/Queen-Adiza)
+[![Deploy on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://repl.it/github/Matrix1999/Queen-Adiza)
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
 
@@ -95,7 +95,7 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 <br>
 > Click below to download the bot file :
 <p align="left">
-<a href="https://github.com/Matri199/Queen-Adiza/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD%20FILES-green" alt="Rainhost Files" width="150"></a>
+<a href="https://github.com/Matrix1999/Queen-Adiza/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD%20FILES-green" alt="Rainhost Files" width="150"></a>
 <br>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
   
@@ -152,7 +152,7 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
   
 ## `CLONE REPO & INSTALLATION DEPENDENCIES`
 ```bash
-git clone https://github.com/Matri199/Queen-Adiza.git
+git clone https://github.com/Matrix1999/Queen-Adiza.git
 cd Queen-Adiza 
 npm start
 ```
@@ -168,7 +168,7 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y ffmpeg
 sudo apt-get install -y wget
 sudo apt-get install -y imagemagick
-git clone https://github.com/Matri199/Queen-Adiza
+git clone https://github.com/Matrix1999/Queen-Adiza
 cd Queen-Adiza
 npm install
 npm start
@@ -199,21 +199,10 @@ npm i -g pm2 && pm2 start index.js -f && pm2 save && pm2 logs
 </h2>
 
 - This bot is made for educational purposes `only` hence `DO NOT MISUSE`.
-- 
 
 **© MATRIX Bot**
 ##
 ![MIT License](https://img.shields.io/badge/License-green.svg)
-
-**💡𝗖𝗥𝗘𝗗𝗜𝗧𝗦 & 𝗖𝗢𝗡𝗧𝗥𝗜𝗕𝗨𝗧𝗢𝗥𝗦💡**
-
-``🚀𝙈𝘼𝙏𝙍𝙄𝙓 𝘽𝙊𝙏 𝙊𝙒𝙉𝙀𝙍🚀``
-
-**🔮© BASE Bot OWNER🔮**
-
-```❤𝗧𝗬𝗟𝗢𝗥❤```
-
-`Special Thanks to my big brother, contributions includes bot plugins, command files, & script optimization.` 
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/>
