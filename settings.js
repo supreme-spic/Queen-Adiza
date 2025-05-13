@@ -55,7 +55,7 @@ global.plink = process.env.PLINK || "https://www.instagram.com/heyits_matrix?igs
 
 //------------------[ WATERMARK ]--------------------//
 
-global.wm = process.env.GL_WM || "©Matrix"
+global.wm = process.env.GL_WM || ® 𝘼𝙙𝙞𝙯𝙖𝙩𝙪🌹"
 
 //---------------------[ REPLIES ]-----------------------//
 
