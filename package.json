@@ -13,7 +13,7 @@
   "author": "Matrix X",
   "license": "MIT",
   "dependencies": {
-    "baileys": "^6.7.16", 
+    "baileys": "npm:@fizzxydev/baileys-pro@^8.7.1", 
     "@octokit/rest": "^21.1.0",
     "acrcloud": "^1.4.0",
     "awesome-phonenumber": "^7.2.0",
