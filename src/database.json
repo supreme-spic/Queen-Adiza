@@ -17,7 +17,11 @@
     "alwaysonline": false,
     "autoviewstatus": false,
     "autoreactstatus": false,
-    "autorecordtype": false
+    "autorecordtype": false,
+    "sudo": [
+      "254796180105@s.whatsapp.net",
+      "254712345678@s.whatsapp.net"
+    ]
   },
   "blacklist": {
     "blacklisted_numbers": []
