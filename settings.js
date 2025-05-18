@@ -26,12 +26,6 @@ global.botname = process.env.BOT_NAME || 'Queen-Adiza'
 
 global.ownernumber = process.env.OWNER_NUMBER || '233593734312' 
 
-//--------------------[ SUDO ]--------------------------//
-
-global.sudo = process.env.SUDO ? process.env.SUDO.split(',') : ['254796180105', '254712345678'];
-// Type additional allowed users here
-//NB: They'll be able to use every functions of the bot without restrictions.
-
 //-----------------[ OWNER NAME ]------------------//
 
 global.ownername = process.env.OWNER_NAME || 'Matrix-X-King' 
