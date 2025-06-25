@@ -48,7 +48,7 @@ global.premiumApiUrl = process.env.PREMIUM_API_URL || 'http://adiza-apikey.godpa
 
 //-----------------[ PREMIUM BOTAPI KEY ]-----------------//
 
-global.botApiKey = process.env.BOT_API_KEY || '1952f36e4acec60c3f4ccf1618284ffd'; 
+global.botApiKey = process.env.BOT_API_KEY || '817ea26bbcffd66de089c3647290c311'; 
 
 
 //-----------------[ CONTEXT LINK ]--------------------//
