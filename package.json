@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {
     "node": ">= 20.x",
-    "npm": ">= 11.x"
+    "npm": ">= 10.x"
   },
   "scripts": {
     "start": "node index.js"
@@ -56,6 +56,7 @@
     "pino": "^9.7.0",
     "steno": "^4.0.2",
     "yargs": "^18.0.0",
-    "yt-search": "^2.13.1"
+    "yt-search": "^2.13.1",
+    "yt-dlp-wrap": "^2.3.12"
   }
 }
