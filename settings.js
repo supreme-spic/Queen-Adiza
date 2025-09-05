@@ -44,11 +44,11 @@ global.author = process.env.STICKER_AUTHOR_NAME || "Adizatu"
 global.dbToken = process.env.GITHUB_TOKEN || "";
 
 //-----------------[ PREMIUM API SETTINGS ]-----------------//
-global.premiumApiUrl = process.env.PREMIUM_API_URL || 'http://adiza-apikey.godpapa.xyz:9000'; // 
+global.premiumApiUrl = process.env.PREMIUM_API_URL || 'https://sensitive-reine-matrix-zat-67060911.koyeb.app'; // 
 
 //-----------------[ PREMIUM BOTAPI KEY ]-----------------//
 
-global.botApiKey = process.env.BOT_API_KEY || '817ea26bbcffd66de089c3647290c311'; 
+global.botApiKey = process.env.BOT_API_KEY || '7589780fef904ec72e5512015c39ef450a07db6fd0804bc3'; 
 
 
 //-----------------[ CONTEXT LINK ]--------------------//
