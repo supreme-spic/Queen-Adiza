@@ -49,11 +49,11 @@ Click the button below to fork QUEEN ADIZA Repository to your GitHub account:
 
 To deploy on Render, generate your session ID from the links below:
 
-* <a href="https://adiza-session.onrender.com/?">
+* <a href="https://adiza-session-ijy0.onrender.com/?">
     <img src="https://img.shields.io/badge/%F0%9F%9A%80%20GET%20PAIR%20CODE%20WEB-ffcc00?style=for-the-badge"/>
     </a>
 
-* <a href="https://adiza-session-ajl1.onrender.com/?">
+* <a href="https://adiza-session-ijy0.onrender.com/?">
     <img src="https://img.shields.io/badge/%F0%9F%9A%80%20GET%20PAIR%20CODE%20WEB-ffcc00?style=for-the-badge"/>
     </a>
 </p>
