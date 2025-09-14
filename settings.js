@@ -44,7 +44,7 @@ global.author = process.env.STICKER_AUTHOR_NAME || "Adizatu"
 global.dbToken = process.env.GITHUB_TOKEN || "";
 
 //-----------------[ PREMIUM API SETTINGS ]-----------------//
-global.premiumApiUrl = process.env.PREMIUM_API_URL || 'https://api-key.matrix-king.top'; // 
+global.premiumApiUrl = process.env.PREMIUM_API_URL || 'https://queen-adiza-apikey.onrender.com'; // 
 
 //-----------------[ PREMIUM BOTAPI KEY ]-----------------//
 
